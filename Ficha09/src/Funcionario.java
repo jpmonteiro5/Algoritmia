@@ -6,19 +6,21 @@ public class Funcionario {
     private String departamento;
 
     //Método construtor
-    public Produto(String nome, double salario, String departamento){
+    public Funcionario(String nome, double salario, String departamento){
         this.nome=nome;
         this.salario=salario;
         this.departamento=departamento;
     }
 
     //Métodos aumentar salário e exibir dados
-    public void aumSal(int quant){
-        this.stock += quant;
+    public double aumSal(double aumento){
+        return this.salario *= (1+(aumento/100));
     }
 
     public void dados(){
-        this.stock += quant;
+        System.out.println("Nome do funcionário: " + this.nome);
+        System.out.println("Salário do funcionário: " + this.salario);
+        System.out.println("Departamento do funcionário: " + this.departamento);
     }
 
 
