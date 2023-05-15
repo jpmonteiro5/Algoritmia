@@ -2,25 +2,50 @@ public class Carro {
 
 
     // ALT+INSERT para fazer getter setter e construtor
-    
+
     // Atributos de instância
     private String marca;
     private String modelo;
     private int ano;
     private int potencia;
     private int cilindrada;
-    private String tipoCombustivel;
+    private TipoCombustivel combustivel;
     private Double litros100Km;
     private int idade;
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+
     //método construtor
-    public Carro(String marca, String modelo, int ano, int potencia, int cilindrada, String tipoCombustivel, Double litros100Km, int idade) {
+    public Carro(String marca, String modelo, int ano, int potencia, int cilindrada, TipoCombustivel combustivel, Double litros100Km, int idade) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
         this.potencia = potencia;
         this.cilindrada = cilindrada;
-        this.tipoCombustivel = tipoCombustivel;
+        this.combustivel = combustivel;
         this.litros100Km = litros100Km;
         this.idade = idade;
     }
@@ -28,7 +53,7 @@ public class Carro {
     //Método que imprime na consola que o carro está ligado
     public void ligar() {
         if(idade>30){
-            if(TipoCombustivel.DIESEL){
+            if(this.combustivel.equals(TipoCombustivel.DIESEL)){
                 System.out.println("Deita um pouco de fumo… Custa a pegar… O carro está ligado!");
                 System.out.println("Vrum-vrum-vrum");
             }else{
@@ -45,6 +70,7 @@ public class Carro {
             }
         }
     }
+    //
 
     public Carro corrida(Carro adversario){
         if(this.potencia>adversario.potencia) {
@@ -70,5 +96,15 @@ public class Carro {
 
     public double consumo(double dist){
         return (dist*this.litros100Km)/100;
+    }
+
+    public void consumoMaior(Carro adversario, double dist) {
+        if (this.consumo(dist) > adversario.consumo(dist)) {
+            System.out.println(this.marca + " tem o maior consumo: " + this.consumo(dist));
+        } else if (this.consumo(dist) < adversario.consumo(dist)) {
+            System.out.println(adversario.marca + " tem o maior consumo: " + adversario.consumo(dist));
+        } else {
+            System.out.println("Ambos os carros consomem o mesmo");
+        }
     }
 }
