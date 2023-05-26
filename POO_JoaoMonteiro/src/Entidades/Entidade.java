@@ -7,6 +7,7 @@ abstract class Entidade {
     private int hp;
     private int forca;
 
+    //construtor de Entidade
     public Entidade(String nome, int hp, int forca) {
         this.nome = nome;
         this.hp = hp;
@@ -39,8 +40,6 @@ abstract class Entidade {
     }
 
     //método mostrarDetalhes
-
     abstract void mostrarDetalhes();
-
 
 }

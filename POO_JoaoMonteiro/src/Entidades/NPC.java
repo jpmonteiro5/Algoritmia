@@ -1,4 +1,15 @@
 package Entidades;
 
-public class NPC {
+public class NPC extends Entidade {
+    public NPC(String nome, int vida, int forca) {
+        super(nome, vida, forca);
+    }
+
+    @Override
+    public void mostrarDetalhes() {
+        System.out.println("Detalhes do NPC:");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Vida: " + getHp());
+        System.out.println("Força: " + getForca());
+    }
 }
