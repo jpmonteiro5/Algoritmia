@@ -42,6 +42,6 @@ public abstract class ItemHeroi {
     }
 
     //método mostrarDetalhes
-    abstract void mostrarDetalhes();
+    public abstract void mostrarDetalhes();
 
 }

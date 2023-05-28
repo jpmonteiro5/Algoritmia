@@ -41,6 +41,7 @@ public class Arqueiro extends Hero {
         }
     }
 
+
     // Método vindo da classe Entidade, obrigatório a todas.
     @Override
     public void mostrarDetalhes() {

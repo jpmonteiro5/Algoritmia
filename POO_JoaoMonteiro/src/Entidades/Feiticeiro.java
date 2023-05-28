@@ -4,6 +4,7 @@ import Itens.Arma;
 import Itens.PocaoHP;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Feiticeiro extends Hero {
     public Feiticeiro(String nome, int vida, int forca, int nivel, int ouro) {
@@ -53,6 +54,6 @@ public class Feiticeiro extends Hero {
         System.out.println("Nível: " + getNivel());
         System.out.println("Ouro: " + getOuro());
         System.out.println("Arma: " + getArma().getNome());
-        System.out.println("Poções: " + getPocaoHp().size());
+        System.out.println("Poções: " + getPocaoHP().size());
     }
 }

@@ -1,13 +1,13 @@
 package Entidades;
 
-abstract class Entidade {
+public abstract class Entidade {
 
     //Atributos
     private String nome;
     private int hp;
     private int forca;
 
-    //construtor de Entidade
+    //Construtor de Entidade
     public Entidade(String nome, int hp, int forca) {
         this.nome = nome;
         this.hp = hp;
@@ -39,7 +39,8 @@ abstract class Entidade {
         this.forca = forca;
     }
 
+
     //método mostrarDetalhes
-    abstract void mostrarDetalhes();
+    public abstract void mostrarDetalhes();
 
 }

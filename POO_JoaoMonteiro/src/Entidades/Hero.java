@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 //Classe abstrata Heroi, expande a classe mãe chamada Entidade
-abstract class Hero extends Entidade {
+public abstract class Hero extends Entidade {
 
     //declarar variáveis
     private int nivel;
@@ -56,11 +56,6 @@ abstract class Hero extends Entidade {
 
     //método abstracto para atacar o NPC
     public abstract void atacar(NPC npc);
-
-
-    public abstract int usarPocao() {
-        System.out.println();
-    }
 
     //Método para retirar ouro da conta do Heroi caso ele compre um item
     public void retirarOuro(int quantidade) {

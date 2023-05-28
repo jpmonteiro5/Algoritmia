@@ -10,10 +10,7 @@ public class Cavaleiro extends Hero {
         super(nome, vida, forca, nivel, ouro);
     }
 
-    /**
-     * Método subscrito da classe NPC
-     * @param npc
-     */
+    //Método subscrito da classe NPC
     @Override
     public void atacar(NPC npc) {
 
@@ -47,12 +44,11 @@ public class Cavaleiro extends Hero {
         }
     }
 
+    // Método vindo da classe Entidade, obrigatório a todas.
 
-    /**
-     * Método vindo da classe Entidade, obrigatório a todas.
-     */
     @Override
     public void mostrarDetalhes() {
 
     }
+
 }

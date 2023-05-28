@@ -28,6 +28,6 @@ public class Arma extends ItemHeroi {
         System.out.println("Preço: " + getPreco());
         System.out.println("Ataque: " + getAtaque());
         System.out.println("Tipo de Herói: " + getTipoHeroi());
-        }
     }
 }
+
